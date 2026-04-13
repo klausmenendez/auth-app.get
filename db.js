@@ -12,7 +12,7 @@ db.exec(`
 `);
 
 function getUser(username) {
-  return db.prepare("SELECT * FROM users WHERE username LIKE ?").get(username)
+  return db.prepare("SELECT * FROM users WHERE username=?").get(username)
 }
 
 function createUser(username, password) {
